@@ -13,9 +13,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.1-service.lge_sm8150",
-vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.lge_sm8150.xml"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.lge_sm8150.rc"],
+    name: "android.hardware.biometrics.fingerprint@2.1-service.lge_sm8250",
+vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.lge_sm8250.xml"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.lge_sm8250.rc"],
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
     srcs: ["service.cpp", "BiometricsFingerprint.cpp"],

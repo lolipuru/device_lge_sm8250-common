@@ -184,7 +184,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 ifneq ($(filter alphaplus betalm flashlm flashlmdd,$(shell echo $(TARGET_PRODUCT) | sed 's/^lineage_//')),)
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.lge_sm8150
+    android.hardware.biometrics.fingerprint@2.1-service.lge_sm8250
 endif
 
 # FM packages
@@ -203,14 +203,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
     android.hardware.gnss@2.1.vendor
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
-    $(LOCAL_PATH)/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
-    $(LOCAL_PATH)/gps/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
-    $(LOCAL_PATH)/gps/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
-    $(LOCAL_PATH)/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
-    $(LOCAL_PATH)/gps/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
 
 # Health
 PRODUCT_PACKAGES += \
@@ -369,7 +361,7 @@ PRODUCT_PACKAGES += \
     libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+    $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
@@ -473,7 +465,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.lge_sm8150
+    vendor.lineage.touch@1.0-service.lge_sm8250
 
 # Trust
 PRODUCT_PACKAGES += \
@@ -529,4 +521,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/lge/sm8150-common/sm8150-common-vendor.mk)
+$(call inherit-product, vendor/lge/sm8250-common/sm8250-common-vendor.mk)

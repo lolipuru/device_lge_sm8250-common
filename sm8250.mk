@@ -400,15 +400,12 @@ PRODUCT_PACKAGES += \
     init.lge.usb.lao.sh \
     init.lge.usb.sh \
     init.mdm.sh \
-    init.qcom.devstart.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
-    init.qcom.sensors.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
     init.qti.chg_policy.sh \
-    init.qti.dcvs.sh \
-    init.qti.fm.sh
+    init.qti.dcvs.sh
 
 PRODUCT_PACKAGES += \
     init.lge.display.rc \
@@ -421,8 +418,7 @@ PRODUCT_PACKAGES += \
     init.lge.vendor.on_post_fs_data.rc \
     init.lge.vendor.on_post_fs.rc \
     init.lge.vendor.wmc.drv.rc \
-    init.msmnile.rc \
-    init.qcom.power.rc \
+    init.kona.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.qti.fm.rc \

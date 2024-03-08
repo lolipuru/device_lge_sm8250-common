@@ -41,15 +41,14 @@
 # Persist files
 /mnt/vendor/persist(/.*)?                               u:object_r:vendor_persist_file:s0
 /mnt/vendor/persist-lg(/.*)?                            u:object_r:persist_lg_data_file:s0
-/mnt/vendor/persist-lg/audio(/.*)?                      u:object_r:persist_lg_audio_file:s0
-/mnt/vendor/persist-lg/camera(/.*)?                     u:object_r:persist_lg_camera_file:s0
+/mnt/vendor/persist-lg/mms(/.*)?                        u:object_r:mms_data_file:s0
+/mnt/vendor/persist-lg/fota(/.*)?                       u:object_r:fota_data_file:s0
 /mnt/vendor/persist-lg/data(/.*)?                       u:object_r:qseesfs_data_file:s0
+/mnt/vendor/persist-lg/mme-q(/.*)?                      u:object_r:qseesfs_data_file:s0
+/mnt/vendor/persist-lg/master(/.*)?                     u:object_r:qseesfs_data_file:s0
+/mnt/vendor/persist-lg/kmstore(/.*)?                    u:object_r:kmstore_data_file:s0
 /mnt/vendor/persist-lg/firmware(/.*)?                   u:object_r:firmware_data_file:s0
-/mnt/vendor/persist-lg/goodix(/.*)?                     u:object_r:persist_lg_fingerprint_file:s0
-/mnt/vendor/persist-lg/tof(./*)?                        u:object_r:persist_lg_camera_file:s0
 /mnt/vendor/persist-lg/widevine(/.*)?                   u:object_r:widevine_data_file:s0
-/mnt/vendor/persist-lg/wifi(/.*)?                       u:object_r:persist_lg_wlan_file:s0
-/mnt/vendor/persist-lg/wifi/qcom(/.*)?                  u:object_r:persist_lg_wlan_file:s0
 
 # Power
 /mnt/vendor/power(/.*)?                                 u:object_r:power_file:s0
@@ -59,6 +58,3 @@
 
 # Swap
 /dev/block/zram1                                        u:object_r:swap_block_device:s0
-
-# Data files
-/data/per_boot(/.*)?                                                 u:object_r:per_boot_file:s0
